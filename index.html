@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Pets - Onyx Greens | Luxury Pet Spa & Grooming Boutique Dubai</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            emerald: '#1E3F2F',     // Deep Onyx Emerald
+                            sage: '#2D5A43',        // Warm Sage Green
+                            sageLight: '#EBF1ED',   // Very Soft Sage Tint
+                            gold: '#D4A359',        // Muted Luxury Gold
+                            sand: '#F5F0EB',        // Warm Sand / Oatmeal
+                            cream: '#FAF7F2',       // Soft Warm Cream background
+                            charcoal: '#222823',    // Softened dark text
+                            muted: '#68726B'        // Natural body text muted
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #FAF7F2;
+            color: #222823;
+        }
+
+        .font-serif-heading {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+        }
+
+        /* Human tactile card styling */
+        .spa-card {
+            background: #FFFFFF;
+            border: 1px solid #E8E2D9;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .spa-card:hover {
+            border-color: #D4A359;
+            box-shadow: 0 16px 32px -12px rgba(30, 63, 47, 0.08);
+            transform: translateY(-3px);
+        }
+
+        /* Custom buttons */
+        .btn-emerald {
+            background-color: #1E3F2F;
+            color: #FAF7F2;
+            transition: all 0.25s ease;
+        }
+
+        .btn-emerald:hover {
+            background-color: #2D5A43;
+            box-shadow: 0 8px 20px -4px rgba(30, 63, 47, 0.3);
+        }
+
+        .btn-gold {
+            background-color: #D4A359;
+            color: #1E3F2F;
+            transition: all 0.25s ease;
+        }
+
+        .btn-gold:hover {
+            background-color: #C2934A;
+            box-shadow: 0 8px 20px -4px rgba(212, 163, 89, 0.4);
+        }
+
+        /* Subtle scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F5F0EB;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2D5A43;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-sage selection:text-white">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-brand-emerald text-brand-cream text-xs py-2 px-4 border-b border-brand-gold/30">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+            <div class="flex items-center gap-4 text-brand-cream/90 font-light">
+                <span><i class="fa-solid fa-location-dot text-brand-gold mr-1.5"></i> Retail 05, Onyx Tower 1, The Greens, Dubai</span>
+                <span class="hidden md:inline text-brand-gold/40">•</span>
+                <span class="hidden md:inline"><i class="fa-solid fa-clock text-brand-gold mr-1.5"></i> Daily: 9:00 AM – 9:50 PM</span>
+            </div>
+            <div class="flex items-center gap-5 font-medium">
+                <a href="tel:+971508893414" class="hover:text-brand-gold transition-colors flex items-center gap-1.5">
+                    <i class="fa-solid fa-phone text-brand-gold text-[11px]"></i>
+                    <span>+971 50 889 3414</span>
+                </a>
+                <a href="https://wa.me/971508893414" target="_blank" class="bg-emerald-700/80 hover:bg-emerald-600 text-white px-2.5 py-0.5 rounded-full text-[11px] transition-colors flex items-center gap-1 border border-emerald-500/40">
+                    <i class="fa-brands fa-whatsapp text-emerald-300"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-40 bg-brand-cream/95 backdrop-blur-md border-b border-stone-200 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-22 py-4 flex items-center justify-between">
+            
+            <!-- Logo Badge -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 rounded-2xl bg-brand-emerald text-brand-gold flex items-center justify-center shadow-md border border-brand-gold/40 group-hover:bg-brand-sage transition-colors">
+                    <i class="fa-solid fa-paw text-xl"></i>
+                </div>
+                <div>
+                    <span class="font-serif-heading text-2xl font-bold tracking-wide text-brand-emerald block leading-none">
+                        BEAUTY PETS
+                    </span>
+                    <span class="text-[10px] font-semibold uppercase tracking-[0.2em] text-brand-gold block mt-1">
+                        ONYX GREENS • DUBAI
+                    </span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-9 text-xs font-semibold uppercase tracking-widest text-brand-emerald">
+                <a href="#about" class="hover:text-brand-gold transition-colors">The Sanctuary</a>
+                <a href="#services" class="hover:text-brand-gold transition-colors">Spa & Grooming</a>
+                <a href="#why-us" class="hover:text-brand-gold transition-colors">Why Pet Parents Love Us</a>
+                <a href="#reviews" class="hover:text-brand-gold transition-colors">Client Stories</a>
+                <a href="#contact" class="hover:text-brand-gold transition-colors">Location & Booking</a>
+            </nav>
+
+            <!-- Book Action -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="#contact" class="btn-emerald px-6 py-3 rounded-xl font-semibold text-xs uppercase tracking-wider shadow-sm flex items-center gap-2 border border-brand-emerald/20">
+                    <i class="fa-regular fa-calendar-check text-brand-gold"></i>
+                    <span>Book Session</span>
+                </a>
+            </div>
+
+            <!-- Mobile Drawer Toggle -->
+            <button id="menu-toggle" class="lg:hidden p-2.5 rounded-xl bg-brand-sand text-brand-emerald hover:text-brand-gold focus:outline-none border border-stone-300">
+                <i class="fa-solid fa-bars-staggered text-lg"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-brand-cream border-b border-stone-300 px-6 py-6 space-y-4">
+            <a href="#about" class="block text-xs font-bold text-brand-emerald uppercase tracking-widest">The Sanctuary</a>
+            <a href="#services" class="block text-xs font-bold text-brand-emerald uppercase tracking-widest">Spa & Grooming Menu</a>
+            <a href="#why-us" class="block text-xs font-bold text-brand-emerald uppercase tracking-widest">Why Choose Us</a>
+            <a href="#reviews" class="block text-xs font-bold text-brand-emerald uppercase tracking-widest">Client Reviews</a>
+            <a href="#contact" class="block text-xs font-bold text-brand-emerald uppercase tracking-widest">Contact & Reserve</a>
+            <div class="pt-2 border-t border-stone-200">
+                <a href="tel:+971508893414" class="block text-center w-full py-3 rounded-xl btn-emerald font-semibold text-xs uppercase tracking-wider">
+                    Call +971 50 889 3414
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative py-16 lg:py-24 bg-gradient-to-b from-brand-sand/70 via-brand-cream to-white border-b border-stone-200 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Hero Left Content -->
+            <div class="lg:col-span-7 space-y-7">
+                <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white border border-brand-gold/40 text-brand-emerald text-xs font-semibold shadow-xs">
+                    <span class="w-2 h-2 rounded-full bg-brand-gold"></span>
+                    <span>Premier Pet Salon at The Onyx Towers, Dubai</span>
+                </div>
+
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif-heading font-bold text-brand-emerald leading-[1.15]">
+                    Gentle Grooming & <br>
+                    <span class="italic text-brand-sage font-normal">Luxury Spa Care</span> for Your Pets
+                </h1>
+
+                <p class="text-sm sm:text-base text-brand-muted max-w-xl leading-relaxed font-light">
+                    Located in the heart of The Greens, Beauty Pets offers calm, personalized, high-end grooming and styling tailored for dogs and cats. We treat your beloved pets like family in a serene, chemical-free environment.
+                </p>
+
+                <div class="flex flex-wrap items-center gap-4 pt-2">
+                    <a href="#contact" class="btn-emerald px-8 py-4 rounded-xl font-semibold text-xs uppercase tracking-wider shadow-md flex items-center gap-2.5">
+                        <i class="fa-solid fa-sparkles text-brand-gold"></i>
+                        <span>Book Grooming Session</span>
+                    </a>
+                    <a href="tel:+971508893414" class="px-7 py-4 rounded-xl bg-white border border-stone-300 text-brand-emerald font-semibold text-xs uppercase tracking-wider hover:bg-brand-sand transition-colors flex items-center gap-2 shadow-xs">
+                        <i class="fa-solid fa-phone text-brand-sage"></i>
+                        <span>+971 50 889 3414</span>
+                    </a>
+                </div>
+
+                <!-- Verified Ratings & Local Trust -->
+                <div class="pt-8 grid grid-cols-3 gap-6 border-t border-stone-200/80">
+                    <div>
+                        <div class="flex items-center gap-1.5 text-brand-gold text-sm mb-1">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="block font-serif-heading text-2xl font-bold text-brand-emerald">4.9 Stars</span>
+                        <span class="text-[11px] text-brand-muted uppercase tracking-wider font-medium">Google Verified</span>
+                    </div>
+                    <div>
+                        <span class="block font-serif-heading text-2xl font-bold text-brand-emerald">The Greens</span>
+                        <span class="text-[11px] text-brand-muted uppercase tracking-wider font-medium">Onyx Tower 1</span>
+                    </div>
+                    <div>
+                        <span class="block font-serif-heading text-2xl font-bold text-brand-emerald">100% Gentle</span>
+                        <span class="text-[11px] text-brand-muted uppercase tracking-wider font-medium">Zero-Stress Care</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Right Tactile Imagery Cards -->
+            <div class="lg:col-span-5">
+                <div class="relative max-w-md mx-auto lg:max-w-none">
+                    
+                    <div class="bg-white p-5 rounded-3xl border border-stone-200 shadow-xl space-y-4">
+                        <!-- Main Image Card -->
+                        <div class="relative h-72 sm:h-80 rounded-2xl overflow-hidden bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&q=80&w=800');">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-emerald/75 via-transparent to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 right-4 text-brand-cream">
+                                <span class="bg-brand-gold text-brand-emerald text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">
+                                    The Greens Dubai
+                                </span>
+                                <h3 class="font-serif-heading text-2xl font-bold mt-2">Stress-Free Atmosphere</h3>
+                                <p class="text-xs text-stone-200 font-light">Custom pampering for pampered pets</p>
+                            </div>
+                        </div>
+
+                        <!-- Highlight Strip -->
+                        <div class="grid grid-cols-2 gap-3 pt-1">
+                            <div class="p-3.5 rounded-2xl bg-brand-sand/80 border border-stone-200 flex items-center gap-3">
+                                <div class="w-9 h-9 rounded-xl bg-brand-emerald text-brand-gold flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-scissors text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs font-bold text-brand-emerald">Master Stylists</h4>
+                                    <span class="text-[10px] text-brand-muted">Breed specific cuts</span>
+                                </div>
+                            </div>
+                            <div class="p-3.5 rounded-2xl bg-brand-sand/80 border border-stone-200 flex items-center gap-3">
+                                <div class="w-9 h-9 rounded-xl bg-brand-emerald text-brand-gold flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-bath text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs font-bold text-brand-emerald">Organic Spa</h4>
+                                    <span class="text-[10px] text-brand-muted">Hypoallergenic wash</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 2: ABOUT THE GREENS SANCTUARY -->
+    <section id="about" class="py-20 bg-white border-b border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="inline-block px-3.5 py-1 rounded-full bg-brand-sageLight text-brand-sage text-xs font-bold uppercase tracking-widest border border-brand-sage/20">
+                        About Our Salon
+                    </div>
+
+                    <h2 class="text-3xl sm:text-4xl font-serif-heading font-bold text-brand-emerald leading-tight">
+                        A Calm, Boutique Sanctuary Designed Around Your Pet’s Comfort
+                    </h2>
+
+                    <p class="text-sm sm:text-base text-brand-muted leading-relaxed font-light">
+                        Located conveniently in Retail 05 at Onyx Tower 1, <strong class="text-brand-emerald font-semibold">Beauty Pets</strong> was founded on a simple promise: to elevate pet grooming into an enjoyable, fear-free spa experience.
+                    </p>
+
+                    <p class="text-sm sm:text-base text-brand-muted leading-relaxed font-light">
+                        Unlike rushed commercial pet shops, our salon limits daily bookings to ensure every dog and cat receives unhurried attention, gentle hand drying, premium organic coat treatments, and patience.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+                        <div class="p-4 rounded-2xl bg-brand-cream border border-stone-200 space-y-2">
+                            <i class="fa-solid fa-heart text-brand-gold text-lg"></i>
+                            <h4 class="font-bold text-xs text-brand-emerald">Fear-Free Handling</h4>
+                            <p class="text-[11px] text-brand-muted leading-normal">Gentle coaxing with positive reinforcement.</p>
+                        </div>
+
+                        <div class="p-4 rounded-2xl bg-brand-cream border border-stone-200 space-y-2">
+                            <i class="fa-solid fa-pump-soap text-brand-gold text-lg"></i>
+                            <h4 class="font-bold text-xs text-brand-emerald">Natural Botanicals</h4>
+                            <p class="text-[11px] text-brand-muted leading-normal">Sulfate-free shampoos suitable for sensitive skins.</p>
+                        </div>
+
+                        <div class="p-4 rounded-2xl bg-brand-cream border border-stone-200 space-y-2">
+                            <i class="fa-solid fa-sparkles text-brand-gold text-lg"></i>
+                            <h4 class="font-bold text-xs text-brand-emerald">Sanitized Suites</h4>
+                            <p class="text-[11px] text-brand-muted leading-normal">Hospital-grade cleaning between sessions.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <div class="h-60 rounded-2xl overflow-hidden bg-cover bg-center border border-stone-200 shadow-sm" style="background-image: url('https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&q=80&w=800');"></div>
+                            <div class="p-5 rounded-2xl bg-brand-emerald text-brand-cream space-y-1">
+                                <span class="font-serif-heading text-2xl font-bold text-brand-gold block">Onyx Tower 1</span>
+                                <span class="text-[11px] text-stone-300 block uppercase tracking-wider font-light">The Greens • Dubai</span>
+                            </div>
+                        </div>
+                        <div class="space-y-4 pt-6">
+                            <div class="p-5 rounded-2xl bg-brand-sand text-brand-emerald space-y-1 border border-stone-300">
+                                <i class="fa-solid fa-shield-cat text-brand-sage text-xl mb-1"></i>
+                                <span class="font-serif-heading text-xl font-bold block">Cat & Dog Specialists</span>
+                                <span class="text-[10px] text-brand-muted block uppercase tracking-wider">Quiet Dedicated Grooming Areas</span>
+                            </div>
+                            <div class="h-60 rounded-2xl overflow-hidden bg-cover bg-center border border-stone-200 shadow-sm" style="background-image: url('https://images.unsplash.com/photo-1541599540903-216a46ca1dc0?auto=format&fit=crop&q=80&w=800');"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: SERVICES & SPA MENU -->
+    <section id="services" class="py-20 bg-brand-sand/50 border-b border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            
+            <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+                <span class="text-brand-sage text-xs font-bold uppercase tracking-widest bg-white px-3.5 py-1.5 rounded-full border border-brand-sage/20">
+                    Tailored Care Menu
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-serif-heading font-bold text-brand-emerald">Grooming & Spa Treatments</h2>
+                <p class="text-brand-muted text-xs sm:text-sm font-light">Select a service tier to explore tailored grooming treatments for your furry companion.</p>
+            </div>
+
+            <!-- Tab Buttons -->
+            <div class="flex flex-wrap justify-center gap-2.5 mb-10" id="service-tabs">
+                <button onclick="switchTab('full')" id="tab-full" class="service-tab-btn px-5 py-2.5 rounded-xl font-semibold text-xs tracking-wider uppercase transition-all bg-brand-emerald text-brand-cream shadow-xs">
+                    <i class="fa-solid fa-scissors mr-1.5 text-brand-gold"></i> Full Grooming
+                </button>
+                <button onclick="switchTab('bath')" id="tab-bath" class="service-tab-btn px-5 py-2.5 rounded-xl font-semibold text-xs tracking-wider uppercase transition-all bg-white text-brand-emerald border border-stone-300 hover:border-brand-gold">
+                    <i class="fa-solid fa-shower mr-1.5 text-brand-sage"></i> Bath & Brush
+                </button>
+                <button onclick="switchTab('nails')" id="tab-nails" class="service-tab-btn px-5 py-2.5 rounded-xl font-semibold text-xs tracking-wider uppercase transition-all bg-white text-brand-emerald border border-stone-300 hover:border-brand-gold">
+                    <i class="fa-solid fa-paw mr-1.5 text-brand-sage"></i> Nails & Ears
+                </button>
+                <button onclick="switchTab('styling')" id="tab-styling" class="service-tab-btn px-5 py-2.5 rounded-xl font-semibold text-xs tracking-wider uppercase transition-all bg-white text-brand-emerald border border-stone-300 hover:border-brand-gold">
+                    <i class="fa-solid fa-wand-magic-sparkles mr-1.5 text-brand-sage"></i> Fur Styling & Dematting
+                </button>
+                <button onclick="switchTab('boutique')" id="tab-boutique" class="service-tab-btn px-5 py-2.5 rounded-xl font-semibold text-xs tracking-wider uppercase transition-all bg-white text-brand-emerald border border-stone-300 hover:border-brand-gold">
+                    <i class="fa-solid fa-bag-shopping mr-1.5 text-brand-sage"></i> Pet Boutique
+                </button>
+            </div>
+
+            <!-- Tab Content Containers -->
+            <div id="service-contents">
+                
+                <!-- Full Grooming Package -->
+                <div id="content-full" class="service-panel grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="spa-card rounded-2xl p-6 flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <span class="text-xs font-bold text-brand-gold uppercase tracking-wider block">Signature Service</span>
+                            <h3 class="font-serif-heading text-2xl font-bold text-brand-emerald">Royal Full Style & Groom</h3>
+                            <p class="text-xs text-brand-muted leading-relaxed font-light">Includes warm hydro-massage bath, breed-specific hair styling, hand fluff drying, nail trimming, ear cleaning, and perfume touch.</p>
+                        </div>
+                        <div class="pt-4 border-t border-stone-100 flex justify-between items-center">
+                            <span class="text-xs font-semibold text-brand-emerald">Dogs & Cats</span>
+                            <a href="#contact" class="text-xs font-bold text-brand-sage hover:text-brand-gold uppercase tracking-wider">Book <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="spa-card rounded-2xl p-6 flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <span class="text-xs font-bold text-brand-gold uppercase tracking-wider block">Teddy & Puppy Cut</span>
+                            <h3 class="font-serif-heading text-2xl font-bold text-brand-emerald">Gentle Breed Sculpting</h3>
+                            <p class="text-xs text-brand-muted leading-relaxed font-light">Hand-scissor styling crafted for Poodles, Pomeranians, Bichons, and Shih Tzus needing tailored rounded facial and body shaping.</p>
+                        </div>
+                        <div class="pt-4 border-t border-stone-100 flex justify-between items-center">
+                            <span class="text-xs font-semibold text-brand-emerald">Precision Scissors</span>
+                            <a href="#contact" class="text-xs font-bold text-brand-sage hover:text-brand-gold uppercase tracking-wider">Book <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="spa-card rounded-2xl p-6 flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <span class="text-xs font-bold text-brand-gold uppercase tracking-wider block">Feline Special</span>
+                            <h3 class="font-serif-heading text-2xl font-bold text-brand-emerald">Cat Executive Spa & Cut</h3>
+                            <p class="text-xs text-brand-muted leading-relaxed font-light">Calm, non-sedated grooming tailored for Persians, British Shorthairs, and domestic cats using specialized feline soothing techniques.</p>
+                        </div>
+                        <div class="pt-4 border-t border-stone-100 flex justify-between items-center">
+                            <span class="text-xs font-semibold text-brand-emerald">Quiet Suite</span>
+                            <a href="#contact" class="text-xs font-bold text-brand-sage hover:text-brand-gold uppercase tracking-wider">Book <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bath & Brush -->
+                <div id="content-bath" class="service-panel hidden grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="spa-card rounded-2xl p-6 flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <span class="text-xs font-bold text-brand-gold uppercase tracking-wider block">Hydrotherapy</span>
+                            <h3 class="font-serif-heading text-2xl font-bold text-brand-emerald">Oatmeal & Hypoallergenic Wash</h3>
+                            <p class="text-xs text-brand-muted leading-relaxed font-light">Deep cleansing bath formulated for pets prone to sensitive, itchy skin. Hydrates fur and restores skin balance.</p>
+                        </div>
+                        <div class="pt-4 border-t border-stone-100 flex justify-between items-center">
+                            <span class="text-xs font-semibold text-brand-emerald">Sensitive Skins</span>
+                            <a href="#contact" class="text-xs font-bold text-brand-sage hover:text-brand-gold uppercase tracking-wider">Book <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="spa-card rounded-2xl p-6 flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <span class="text-xs font-bold text-brand-gold uppercase tracking-wider block">Deshedding Therapy</span>
+                            <h3 class="font-serif-heading text-2xl font-bold text-brand-emerald">Furminator Shed-Control Wash</h3>
+                            <p class="text-xs text-brand-muted leading-relaxed font-light">Specialized undercoat removal wash and high-velocity blowout designed to drastically cut down shedding around your home.</p>
+                        </div>
+                        <div class="pt-4 border-t border-stone-100 flex justify-between items-center">
+                            <span class="text-xs font-semibold text-brand-emerald">Reduces Loose Hair</span>
+                            <a href="#contact" class="text-xs font-bold text-brand-sage hover:text-brand-gold uppercase tracking-wider">Book <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="spa-card rounded-2xl p-6 flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <span class="text-xs font-bold text-brand-gold uppercase tracking-wider block">Quick Refresh</span>
+                            <h3 class="font-serif-heading text-2xl font-bold text-brand-emerald">Express Wash & Blow Dry</h3>
+                            <p class="text-xs text-brand-muted leading-relaxed font-light">Ideal for active pets after walks in the park. Quick shampoo, fluff dry, and paw sanitization.</p>
+                        </div>
+                        <div class="pt-4 border-t border-stone-100 flex justify-between items-center">
+                            <span class="text-xs font-semibold text-brand-emerald">Fast Turnaround</span>
+                            <a href="#contact" class="text-xs font-bold text-brand-sage hover:text-brand-gold uppercase tracking-wider">Book <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nails & Ear Care -->
+                <div id="content-nails" class="service-panel hidden grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="spa-card rounded-2xl p-6 flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <span class="text-xs font-bold text-brand-gold uppercase tracking-wider block">Paw Care</span>
+                            <h3 class="font-serif-heading text-2xl font-bold text-brand-emerald">Nail Clipping & Filing</h3>
+                            <p class="text-xs text-brand-muted leading-relaxed font-light">Gentle paw pad trim, nail clipping, and electric grinding for smooth rounded edges without sharp snags.</p>
+                        </div>
+                        <div class="pt-4 border-t border-stone-100 flex justify-between items-center">
+                            <span class="text-xs font-semibold text-brand-emerald">Safe & Fast</span>
+                            <a href="#contact" class="text-xs font-bold text-brand-sage hover:text-brand-gold uppercase tracking-wider">Book <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="spa-card rounded-2xl p-6 flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <span class="text-xs font-bold text-brand-gold uppercase tracking-wider block">Hygiene</span>
+                            <h3 class="font-serif-heading text-2xl font-bold text-brand-emerald">Ear Cleaning & Plucking</h3>
+                            <p class="text-xs text-brand-muted leading-relaxed font-light">Removal of excess ear hair and gentle flush with antiseptic solution to prevent yeast and ear mites.</p>
+                        </div>
+                        <div class="pt-4 border-t border-stone-100 flex justify-between items-center">
+                            <span class="text-xs font-semibold text-brand-emerald">Infection Control</span>
+                            <a href="#contact" class="text-xs font-bold text-brand-sage hover:text-brand-gold uppercase tracking-wider">Book <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="spa-card rounded-2xl p-6 flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <span class="text-xs font-bold text-brand-gold uppercase tracking-wider block">Nourishment</span>
+                            <h3 class="font-serif-heading text-2xl font-bold text-brand-emerald">Organic Paw Balm Treatment</h3>
+                            <p class="text-xs text-brand-muted leading-relaxed font-light">Rich soothing application of natural shea butter and beeswax to heal cracked or dry paw pads.</p>
+                        </div>
+                        <div class="pt-4 border-t border-stone-100 flex justify-between items-center">
+                            <span class="text-xs font-semibold text-brand-emerald">Hydrating Balm</span>
+                            <a href="#contact" class="text-xs font-bold text-brand-sage hover:text-brand-gold uppercase tracking-wider">Book <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fur Styling & Dematting -->
+                <div id="content-styling" class="service-panel hidden grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="spa-card rounded-2xl p-6 flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <span class="text-xs font-bold text-brand-gold uppercase tracking-wider block">Gentle Detangling</span>
+                            <h3 class="font-serif-heading text-2xl font-bold text-brand-emerald">Painless Dematting Therapy</h3>
+                            <p class="text-xs text-brand-muted leading-relaxed font-light">Using specialized conditioning sprays and splitters to comb out knots gently without hurting delicate skin.</p>
+                        </div>
+                        <div class="pt-4 border-t border-stone-100 flex justify-between items-center">
+                            <span class="text-xs font-semibold text-brand-emerald">Coat Preservation</span>
+                            <a href="#contact" class="text-xs font-bold text-brand-sage hover:text-brand-gold uppercase tracking-wider">Book <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="spa-card rounded-2xl p-6 flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <span class="text-xs font-bold text-brand-gold uppercase tracking-wider block">Creative Touch</span>
+                            <h3 class="font-serif-heading text-2xl font-bold text-brand-emerald">Asian Fusion & Hand Scissoring</h3>
+                            <p class="text-xs text-brand-muted leading-relaxed font-light">Modern cute styling focused on plush teddy bear faces, rounded paws, and stylish tail trims.</p>
+                        </div>
+                        <div class="pt-4 border-t border-stone-100 flex justify-between items-center">
+                            <span class="text-xs font-semibold text-brand-emerald">Stylist Choice</span>
+                            <a href="#contact" class="text-xs font-bold text-brand-sage hover:text-brand-gold uppercase tracking-wider">Book <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="spa-card rounded-2xl p-6 flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <span class="text-xs font-bold text-brand-gold uppercase tracking-wider block">Summer Trim</span>
+                            <h3 class="font-serif-heading text-2xl font-bold text-brand-emerald">Light Hygienic Trim</h3>
+                            <p class="text-xs text-brand-muted leading-relaxed font-light">Targeted trimming around face, paws, sanitary areas, and tail base for stay-clean everyday convenience.</p>
+                        </div>
+                        <div class="pt-4 border-t border-stone-100 flex justify-between items-center">
+                            <span class="text-xs font-semibold text-brand-emerald">Maintenance</span>
+                            <a href="#contact" class="text-xs font-bold text-brand-sage hover:text-brand-gold uppercase tracking-wider">Book <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pet Boutique -->
+                <div id="content-boutique" class="service-panel hidden grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="spa-card rounded-2xl p-6 flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <span class="text-xs font-bold text-brand-gold uppercase tracking-wider block">Curated Fashion</span>
+                            <h3 class="font-serif-heading text-2xl font-bold text-brand-emerald">Luxury Harnesses & Leashes</h3>
+                            <p class="text-xs text-brand-muted leading-relaxed font-light">Handpicked leather and velvet walk accessories imported from artisanal pet designer brands.</p>
+                        </div>
+                        <div class="pt-4 border-t border-stone-100 flex justify-between items-center">
+                            <span class="text-xs font-semibold text-brand-emerald">In-Store Boutique</span>
+                            <a href="#contact" class="text-xs font-bold text-brand-sage hover:text-brand-gold uppercase tracking-wider">Inquire <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="spa-card rounded-2xl p-6 flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <span class="text-xs font-bold text-brand-gold uppercase tracking-wider block">Healthy Delights</span>
+                            <h3 class="font-serif-heading text-2xl font-bold text-brand-emerald">Organic Treats & Food</h3>
+                            <p class="text-xs text-brand-muted leading-relaxed font-light">Single-ingredient freeze-dried snacks, natural dental chews, and grain-free artisanal treats.</p>
+                        </div>
+                        <div class="pt-4 border-t border-stone-100 flex justify-between items-center">
+                            <span class="text-xs font-semibold text-brand-emerald">100% Natural</span>
+                            <a href="#contact" class="text-xs font-bold text-brand-sage hover:text-brand-gold uppercase tracking-wider">Inquire <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="spa-card rounded-2xl p-6 flex flex-col justify-between space-y-4">
+                        <div class="space-y-3">
+                            <span class="text-xs font-bold text-brand-gold uppercase tracking-wider block">Home Spa Essentials</span>
+                            <h3 class="font-serif-heading text-2xl font-bold text-brand-emerald">Coat Conditioners & Perfumes</h3>
+                            <p class="text-xs text-brand-muted leading-relaxed font-light">Take home the salon fragrance! Gentle grooming sprays, slicker brushes, and leave-in serums.</p>
+                        </div>
+                        <div class="pt-4 border-t border-stone-100 flex justify-between items-center">
+                            <span class="text-xs font-semibold text-brand-emerald">At-Home Maintenance</span>
+                            <a href="#contact" class="text-xs font-bold text-brand-sage hover:text-brand-gold uppercase tracking-wider">Inquire <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: WHY PET PARENTS LOVE US -->
+    <section id="why-us" class="py-20 bg-brand-emerald text-brand-cream relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-brand-gold text-xs font-bold uppercase tracking-widest border border-brand-gold/30 px-3.5 py-1 rounded-full bg-brand-sage/40">
+                        The Onyx Greens Difference
+                    </span>
+
+                    <h2 class="text-3xl sm:text-5xl font-serif-heading font-bold text-white leading-tight">
+                        Why Dubai Pet Parents Trust Beauty Pets
+                    </h2>
+
+                    <p class="text-sm sm:text-base text-stone-300 leading-relaxed font-light">
+                        We know your pet is part of your family. Our boutique salon is designed specifically to eliminate the chaos and fear often associated with traditional grooming parlors.
+                    </p>
+
+                    <div class="space-y-5 pt-2">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-brand-sage text-brand-gold flex items-center justify-center shrink-0 border border-brand-gold/30 mt-1">
+                                <i class="fa-solid fa-hands-holding-circle text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-white">Non-Sedated, Gentle Handling</h4>
+                                <p class="text-xs text-stone-300 font-light mt-0.5">Our certified stylists use calm reassurance and gentle technique to make shy or nervous pets feel safe.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-brand-sage text-brand-gold flex items-center justify-center shrink-0 border border-brand-gold/30 mt-1">
+                                <i class="fa-solid fa-pump-medical text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-white">Strict Hygiene Protocols</h4>
+                                <p class="text-xs text-stone-300 font-light mt-0.5">Tables, blades, brushes, and bath tubs are disinfected thoroughly between every single appointment.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-brand-sage text-brand-gold flex items-center justify-center shrink-0 border border-brand-gold/30 mt-1">
+                                <i class="fa-solid fa-clock-rotate-left text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-white">Private Appointments & Easy Parking</h4>
+                                <p class="text-xs text-stone-300 font-light mt-0.5">Conveniently located at Retail 05, Onyx Tower 1 with ample parking in The Greens community.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <a href="tel:+971508893414" class="inline-flex items-center gap-2 btn-gold px-7 py-3.5 rounded-xl font-bold text-xs uppercase tracking-wider">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>Call Reception: +971 50 889 3414</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Card Box -->
+                <div class="lg:col-span-6">
+                    <div class="bg-brand-sage/40 p-6 sm:p-8 rounded-3xl border border-brand-gold/30 space-y-6 backdrop-blur-xs">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-shield-heart text-brand-gold text-2xl"></i>
+                            <div>
+                                <h3 class="font-serif-heading text-2xl font-bold text-white">Cat & Dog Peace of Mind</h3>
+                                <p class="text-xs text-stone-300 font-light">Customized session length</p>
+                            </div>
+                        </div>
+
+                        <p class="text-xs text-stone-300 leading-relaxed font-light">
+                            Whether your pet needs a routine bath after a park run or a complete show-ready styling, our team ensures they return to you relaxed, clean, and smelling wonderful.
+                        </p>
+
+                        <div class="p-4 rounded-2xl bg-brand-emerald border border-brand-gold/20 flex items-center justify-between">
+                            <div>
+                                <strong class="text-white text-xs block font-bold">Operating Hours</strong>
+                                <span class="text-[11px] text-stone-300 font-light">Open Every Day: 9:00 AM – 9:50 PM</span>
+                            </div>
+                            <span class="text-xs font-bold text-brand-gold bg-brand-sage/60 px-3 py-1 rounded-full border border-brand-gold/30">7 Days/Week</span>
+                        </div>
+
+                        <div class="text-xs text-stone-300 flex items-center gap-2 pt-2">
+                            <i class="fa-solid fa-circle-check text-brand-gold"></i>
+                            <span>Walk-ins based on availability • Bookings recommended</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: REAL CUSTOMER REVIEWS -->
+    <section id="reviews" class="py-20 bg-white border-b border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            
+            <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
+                <span class="text-brand-sage text-xs font-bold uppercase tracking-widest bg-brand-sand px-3.5 py-1.5 rounded-full border border-stone-200">
+                    4.9 ★ Verified Google Reviews
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-serif-heading font-bold text-brand-emerald">Loved by Local Pet Parents</h2>
+                <p class="text-brand-muted text-xs sm:text-sm font-light">Read genuine feedback from pet owners living in The Greens, Views, and nearby Dubai communities.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Review 1 -->
+                <div class="bg-brand-cream/70 p-6 rounded-2xl border border-stone-200 flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <div class="flex text-brand-gold text-xs gap-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-xs text-brand-muted leading-relaxed italic font-light">
+                            "Hands down the best grooming salon in The Greens! My Toy Poodle Leo is usually terrified of blow dryers, but the staff here were so patient and gentle. He came out looking like a teddy bear!"
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-stone-200 flex items-center justify-between">
+                        <div>
+                            <h5 class="font-bold text-xs text-brand-emerald">Sarah Al-Maktoum</h5>
+                            <span class="text-[10px] text-brand-muted">Resident at The Views</span>
+                        </div>
+                        <i class="fa-brands fa-google text-stone-400 text-sm"></i>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-brand-cream/70 p-6 rounded-2xl border border-stone-200 flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <div class="flex text-brand-gold text-xs gap-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-xs text-brand-muted leading-relaxed italic font-light">
+                            "Very clean, high-end shop inside Onyx Tower 1. Took my Persian cat for dematting and bath. They treated him with extreme care. Super convenient location and friendly team."
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-stone-200 flex items-center justify-between">
+                        <div>
+                            <h5 class="font-bold text-xs text-brand-emerald">David Miller</h5>
+                            <span class="text-[10px] text-brand-muted">The Greens Dubai</span>
+                        </div>
+                        <i class="fa-brands fa-google text-stone-400 text-sm"></i>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-brand-cream/70 p-6 rounded-2xl border border-stone-200 flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <div class="flex text-brand-gold text-xs gap-1">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-xs text-brand-muted leading-relaxed italic font-light">
+                            "Great service, smell lasts for days! Nail trimming was done super fast with zero stress. So happy to have Beauty Pets right downstairs in Onyx Tower."
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-stone-200 flex items-center justify-between">
+                        <div>
+                            <h5 class="font-bold text-xs text-brand-emerald">Elena Rostova</h5>
+                            <span class="text-[10px] text-brand-muted">Onyx Towers Resident</span>
+                        </div>
+                        <i class="fa-brands fa-google text-stone-400 text-sm"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: LOCATION, CONTACT & RESERVATION -->
+    <section id="contact" class="py-20 bg-brand-sand/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Details -->
+                <div class="lg:col-span-5 space-y-7">
+                    <div>
+                        <span class="text-brand-sage text-xs font-bold uppercase tracking-widest bg-white px-3.5 py-1.5 rounded-full border border-stone-200">
+                            Visit Beauty Pets
+                        </span>
+                        <h2 class="text-3xl sm:text-4xl font-serif-heading font-bold text-brand-emerald mt-3">We’re Ready to Welcome Your Pet</h2>
+                        <p class="text-xs sm:text-sm text-brand-muted font-light mt-1">Conveniently situated in The Greens with easy tower access and retail parking.</p>
+                    </div>
+
+                    <div class="space-y-5 text-xs sm:text-sm">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-brand-emerald text-brand-gold flex items-center justify-center shrink-0 border border-brand-gold/30 mt-0.5">
+                                <i class="fa-solid fa-location-dot text-sm"></i>
+                            </div>
+                            <div>
+                                <strong class="text-brand-emerald block font-bold">Salon Address</strong>
+                                <span class="text-brand-muted font-light">Retail 05, Onyx Tower 1, The Greens, Dubai, United Arab Emirates</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-brand-emerald text-brand-gold flex items-center justify-center shrink-0 border border-brand-gold/30 mt-0.5">
+                                <i class="fa-solid fa-phone text-sm"></i>
+                            </div>
+                            <div>
+                                <strong class="text-brand-emerald block font-bold">Phone & WhatsApp</strong>
+                                <a href="tel:+971508893414" class="text-brand-sage hover:underline font-semibold block">+971 50 889 3414</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-brand-emerald text-brand-gold flex items-center justify-center shrink-0 border border-brand-gold/30 mt-0.5">
+                                <i class="fa-solid fa-clock text-sm"></i>
+                            </div>
+                            <div>
+                                <strong class="text-brand-emerald block font-bold">Opening Hours</strong>
+                                <span class="text-brand-muted block font-light">Monday – Sunday: 9:00 AM – 9:50 PM</span>
+                                <span class="text-[11px] text-brand-gold font-medium block mt-0.5">Open 7 Days a Week</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-2">
+                        <a href="https://maps.google.com/?q=Onyx+Tower+1+The+Greens+Dubai" target="_blank" class="inline-flex items-center gap-2 border border-brand-emerald text-brand-emerald bg-white px-6 py-3 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-brand-emerald hover:text-white transition-all shadow-xs">
+                            <i class="fa-solid fa-map-location-dot text-brand-gold"></i>
+                            <span>Get Directions on Google Maps</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Booking Request Form -->
+                <div class="lg:col-span-7">
+                    <form class="bg-white p-6 sm:p-8 rounded-3xl border border-stone-200 shadow-sm space-y-5" onsubmit="event.preventDefault(); handleBookingSubmit();">
+                        <div class="border-b border-stone-100 pb-4">
+                            <h3 class="text-2xl font-serif-heading font-bold text-brand-emerald">Book a Spa Appointment</h3>
+                            <p class="text-xs text-brand-muted font-light mt-1">Submit your request below and our reception will contact you to confirm timing.</p>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-[11px] text-brand-emerald uppercase font-bold mb-1">Pet Owner Name</label>
+                                <input type="text" id="owner-name" required placeholder="e.g. Sarah Jenkins" class="w-full px-4 py-3 rounded-xl bg-brand-cream/60 border border-stone-200 text-xs text-brand-emerald focus:outline-none focus:border-brand-gold">
+                            </div>
+                            <div>
+                                <label class="block text-[11px] text-brand-emerald uppercase font-bold mb-1">Mobile / WhatsApp Number</label>
+                                <input type="tel" id="owner-phone" required placeholder="+971 50 xxx xxxx" class="w-full px-4 py-3 rounded-xl bg-brand-cream/60 border border-stone-200 text-xs text-brand-emerald focus:outline-none focus:border-brand-gold">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <div>
+                                <label class="block text-[11px] text-brand-emerald uppercase font-bold mb-1">Pet Type</label>
+                                <select id="pet-type" class="w-full px-4 py-3 rounded-xl bg-brand-cream/60 border border-stone-200 text-xs text-brand-emerald focus:outline-none focus:border-brand-gold">
+                                    <option value="Dog">Dog</option>
+                                    <option value="Cat">Cat</option>
+                                    <option value="Multiple Pets">Multiple Pets</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-[11px] text-brand-emerald uppercase font-bold mb-1">Pet Breed & Weight</label>
+                                <input type="text" id="pet-breed" placeholder="e.g. Poodle, 6kg" class="w-full px-4 py-3 rounded-xl bg-brand-cream/60 border border-stone-200 text-xs text-brand-emerald focus:outline-none focus:border-brand-gold">
+                            </div>
+                            <div>
+                                <label class="block text-[11px] text-brand-emerald uppercase font-bold mb-1">Service Requested</label>
+                                <select id="pet-service" class="w-full px-4 py-3 rounded-xl bg-brand-cream/60 border border-stone-200 text-xs text-brand-emerald focus:outline-none focus:border-brand-gold">
+                                    <option value="Full Grooming Package">Full Grooming Package</option>
+                                    <option value="Bath & Brush Hydrotherapy">Bath & Brush</option>
+                                    <option value="Nail Trim & Ear Cleaning">Nails & Ear Care</option>
+                                    <option value="Dematting & Fur Styling">Fur Styling & Dematting</option>
+                                    <option value="Boutique Shopping / Consultation">Boutique Consultation</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-[11px] text-brand-emerald uppercase font-bold mb-1">Preferred Date</label>
+                                <input type="date" id="booking-date" required class="w-full px-4 py-3 rounded-xl bg-brand-cream/60 border border-stone-200 text-xs text-brand-emerald focus:outline-none focus:border-brand-gold">
+                            </div>
+                            <div>
+                                <label class="block text-[11px] text-brand-emerald uppercase font-bold mb-1">Preferred Time Window</label>
+                                <select id="booking-time" class="w-full px-4 py-3 rounded-xl bg-brand-cream/60 border border-stone-200 text-xs text-brand-emerald focus:outline-none focus:border-brand-gold">
+                                    <option value="Morning (9:00 AM - 12:00 PM)">Morning (9:00 AM - 12:00 PM)</option>
+                                    <option value="Afternoon (12:00 PM - 4:00 PM)">Afternoon (12:00 PM - 4:00 PM)</option>
+                                    <option value="Evening (4:00 PM - 9:50 PM)">Evening (4:00 PM - 9:50 PM)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-[11px] text-brand-emerald uppercase font-bold mb-1">Special Instructions / Medical Notes</label>
+                            <textarea id="booking-notes" rows="3" placeholder="Tell us about temperament, skin sensitivities, or specific grooming preferences..." class="w-full px-4 py-3 rounded-xl bg-brand-cream/60 border border-stone-200 text-xs text-brand-emerald focus:outline-none focus:border-brand-gold"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 rounded-xl btn-emerald font-bold text-xs uppercase tracking-wider shadow-sm">
+                            Submit Booking Request
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-brand-emerald text-stone-300 text-xs border-t border-brand-gold/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-paw text-brand-gold"></i>
+                <span>© 2026 Beauty Pets - Retail 05, Onyx Tower 1, The Greens, Dubai, UAE. All Rights Reserved.</span>
+            </div>
+            <div class="flex gap-5 text-brand-gold font-medium">
+                <a href="tel:+971508893414" class="hover:underline"><i class="fa-solid fa-phone mr-1"></i>+971 50 889 3414</a>
+                <a href="#contact" class="hover:underline"><i class="fa-solid fa-location-dot mr-1"></i>Onyx Tower 1, Dubai</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notification Modal Box -->
+    <div id="modal-box" class="fixed inset-0 z-50 bg-brand-emerald/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-white p-6 sm:p-8 rounded-3xl max-w-md w-full border border-brand-gold/40 text-center space-y-4 shadow-2xl">
+            <div class="w-14 h-14 rounded-full bg-brand-sageLight text-brand-sage flex items-center justify-center mx-auto text-2xl border border-brand-sage/30">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3 class="text-2xl font-serif-heading font-bold text-brand-emerald" id="modal-title">Booking Requested</h3>
+            <p class="text-xs text-brand-muted leading-relaxed" id="modal-msg">Thank you for reaching out to Beauty Pets - Onyx Greens.</p>
+            <button onclick="closeModal()" class="w-full py-3 rounded-xl btn-emerald font-bold text-xs uppercase tracking-wider">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Mobile Drawer Toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Interactive Service Menu Tab Switcher
+        function switchTab(category) {
+            // Hide all panels
+            const panels = document.querySelectorAll('.service-panel');
+            panels.forEach(panel => panel.classList.add('hidden'));
+
+            // Reset tab styles
+            const tabBtns = document.querySelectorAll('.service-tab-btn');
+            tabBtns.forEach(btn => {
+                btn.classList.remove('bg-brand-emerald', 'text-brand-cream', 'shadow-xs');
+                btn.classList.add('bg-white', 'text-brand-emerald', 'border', 'border-stone-300');
+            });
+
+            // Show target panel
+            const activePanel = document.getElementById('content-' + category);
+            if (activePanel) {
+                activePanel.classList.remove('hidden');
+            }
+
+            // Highlight target button
+            const activeBtn = document.getElementById('tab-' + category);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-white', 'text-brand-emerald', 'border', 'border-stone-300');
+                activeBtn.classList.add('bg-brand-emerald', 'text-brand-cream', 'shadow-xs');
+            }
+        }
+
+        // Handle Booking Form Submission
+        function handleBookingSubmit() {
+            const owner = document.getElementById('owner-name').value;
+            const phone = document.getElementById('owner-phone').value;
+            const service = document.getElementById('pet-service').value;
+
+            const modalTitle = document.getElementById('modal-title');
+            const modalMsg = document.getElementById('modal-msg');
+            const modalBox = document.getElementById('modal-box');
+
+            modalTitle.innerText = "Appointment Request Received!";
+            modalMsg.innerText = "Thank you, " + owner + ". Your booking request for '" + service + "' at our Onyx Greens salon has been received. Our team will contact you at " + phone + " shortly to confirm your exact slot.";
+
+            modalBox.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('modal-box').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
